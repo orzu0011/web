@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k&dxl_3=8$kzbq6!d&6cf(m-%ws(^$4qiflcn2^66b(bi*@nie
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['eef3-202-79-184-99.ngrok-free.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'teacher.apps.TeacherConfig',
     'users.apps.UsersConfig',
     'drf_yasg',
+    'groups.apps.GroupsConfig',
 ]
 
 MIDDLEWARE = [

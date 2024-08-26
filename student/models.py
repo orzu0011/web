@@ -3,7 +3,7 @@ from django.db import models
 from datetime import date
 from django.utils import timezone
 import random
-from django.db.models import Sum
+# from django.db.models import Sum
 
 
 class Student(models.Model):
@@ -24,9 +24,9 @@ class Student(models.Model):
     def str(self):
         return str(self.full_name)
 
-    @staticmethod
-    def get_wallet_sums():
+    # @staticmethod
+    # def get_wallet_sums():
 
-        negative_wallet_sum = Student.objects.filter(wallet__lt=0).aggregate(Sum('wallet'))['wallet__sum'] or 0
-        positive_wallet_sum = Student.objects.filter(wallet__gt=0).aggregate(Sum('wallet'))['wallet__sum'] or 0
-        return negative_wallet_sum, positive_wallet_sum
+    #     negative_wallet_sum = Student.objects.filter(wallet__lt=0).aggregate(Sum('wallet'))['wallet__sum'] or 0
+    #     positive_wallet_sum = Student.objects.filter(wallet__gt=0).aggregate(Sum('wallet'))['wallet__sum'] or 0
+    #     return negative_wallet_sum, positive_wallet_sum

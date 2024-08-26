@@ -9,6 +9,9 @@ from django.conf.urls.static import static
 from core.routers import DefaultRouter 
 from course.urls import router as course_router 
 from teacher.urls import router as teacher_router
+from student.urls import router as student_router
+from other.urls import router as room_router
+from groups.urls import router as groups_router
 
 
 schema_view = get_schema_view(
@@ -28,6 +31,9 @@ schema_view = get_schema_view(
 router = DefaultRouter()
 router.extend(course_router)
 router.extend(teacher_router)
+router.extend(student_router)
+router.extend(groups_router)
+router.extend(room_router)
 
 # Main URL patterns
 urlpatterns = [

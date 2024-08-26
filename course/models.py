@@ -6,7 +6,8 @@ class Lesson_duration(models.Model):
     duration= models.CharField(max_length=256)
     
     class Meta:
-        verbose_name = ('Dars davomiyligi')
+        verbose_name = 'Dars davomiyligi'
+        verbose_name_plural = "Dars davomiyligi"
         
         
 class Course(models.Model):
